@@ -1,0 +1,1 @@
+Image template from content-image.php

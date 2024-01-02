@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@200;300;400;600&family=Roboto:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* Root */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --background: #2C2F38;
+    --primary: #4679B4;
+    --secondary: #4679B4;
+    --secondary-hover: #396291;
+    --tertiary: #454B59;
+    --accent1: #CFD6E8;
+    --accent1-hover: #C4CADB;
+    --transition: 0.2s ease-in-out;
+    --text-color-main: #1E1E1E;
+    --border-radius-sm: 5px;
+    --border-radius-md: 15px;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 2.5rem;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    color: #EEF2FF;
+}
+
+/* Typography */
+
+
+
+/* Layout Elements */
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.page-content-container {
+    width: 100%;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.site-main .entry-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 0 3rem;
+}
+
+/* Hero */
+
+.hero {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+}
+
+.hero-content>p {
+    display: flex;
+    flex-direction: column;
+    font-size: 4.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-content span {
+    background-color: rgba(44, 47, 56, 0.8);
+    width: fit-content;
+    padding: 0rem 1.5rem;
+    line-height: 1.4;
+}
+
+/* Navbar */
+
+.navbar-femart {
+    padding: 1rem 3rem;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    list-style-type: none;
+}
+
+nav a {
+    position: relative;
+    transition: var(--transition);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+nav a:not(.btn)::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    height: 4px;
+    background: var(--primary);
+    transform: scaleX(0);
+    border-radius: 5px;
+    transition: transform var(--transition);
+}
+
+nav a:not(.btn):hover::after {
+    transform: scaleX(1);
+}
+
+#menu-item-50 a {
+    display: block;
+    background-color: var(--secondary);
+    border-radius: var(--border-radius-sm);
+    padding: 0.5rem 2rem;
+}
+
+#menu-item-50 a:hover {
+    background-color: var(--secondary-hover);
+}
+
+#menu-item-50 a:hover::after {
+    display: none;
+}
+
+.header-logo {
+    width: 33%;
+    max-width: 150px;
+}
+
+ul.sub-menu {
+    display: block;
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    width: 16ch;
+    transition: var(--transition);
+    overflow: hidden;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+li.menu-item-has-children {
+    position: relative;
+}
+
+li.menu-item-has-children:hover>ul.sub-menu {
+    position: absolute;
+    display: block;
+    background-color: var(--accent1);
+    color: #000000;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+    border-radius: var(--border-radius-sm);
+    transform: scaleY(1);
+}
+
+ul.sub-menu li {
+    padding: 1rem 2rem;
+    border-bottom: 1px dotted var(--primary);
+}
+
+ul.sub-menu li:last-of-type {
+    border-bottom: none;
+}
+
+ul.sub-menu a {
+    color: #000000;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+ul.sub-menu li:hover {
+    background-color: var(--accent1-hover);
+}
+
+ul.sub-menu a:hover::after {
+    display: none;
+}
+
+/* WordPress Classes */
+
+.wp-block-button {
+    width: 100%;
+}
+
+.wp-block-button__link.wp-element-button {
+    display: block;
+    background-color: var(--secondary);
+    border-radius: var(--border-radius-sm);
+}
+
+.wp-block-button__link.wp-element-button:hover {
+    background-color: var(--secondary-hover);
+}
+
+.wp-block-media-text__media {
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.wp-block-heading.has-medium-font-size {
+    font-size: 4rem !important;
+}
+
+.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: var(--border-radius-md);
+    background-color: var(--accent1);
+    color: #000000;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow .wp-block-heading {
+    padding: 0;
+    margin: 0;
+}
+
+.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow img {
+    border-radius: var(--border-radius-md);
+}
+
+/* WordPress Contact Form */
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+textarea {
+    border-radius: var(--border-radius-md) !important;
+    padding: 1rem !important;
+    border: 4px solid var(--primary) !important;
+    font-size: 2rem !important;
+}
