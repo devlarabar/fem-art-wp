@@ -1,7 +1,11 @@
 <?php
 /* Template for displaying 404 */
 
-get_header();
+if (is_page('home')) {
+    get_header();
+} else {
+    get_header('page');
+}
 ?>
 
 <div id="primary" class="content-area">

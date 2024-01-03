@@ -1,7 +1,11 @@
 <?php
 /* Template for displaying search results */
 
-get_header();
+if (is_page('home')) {
+    get_header();
+} else {
+    get_header('page');
+}
 ?>
 
 <div id="primary" class="search-content-area">

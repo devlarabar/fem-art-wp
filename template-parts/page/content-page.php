@@ -3,14 +3,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>">
-    <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-
-    <?php
-    /* Page thumbnail */
-    if (has_post_thumbnail()) :
-        the_post_thumbnail('full'); // full, large, medium, custom size
-    endif;
-    ?>
 
     <div class="entry-content">
         <?php
@@ -23,7 +15,7 @@
     </div>
 
     <?php if (get_edit_post_link()) : ?>
-        <footer class="entry-footer">
+        <footer class="entry-footer" hidden>
             <?php
             edit_post_link(
                 sprintf(

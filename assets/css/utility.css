@@ -33,3 +33,9 @@
 .h-full {
     height: 100%;
 }
+
+/* Spacing */
+
+.p-lg {
+    padding: 3rem;
+}

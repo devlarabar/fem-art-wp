@@ -1,6 +1,11 @@
 <?php
 /* Template for displaying all the pages */
-get_header();
+
+if (is_page('home')) {
+    get_header();
+} else {
+    get_header('page');
+}
 ?>
 
 <div id="primary" class="content-area">
