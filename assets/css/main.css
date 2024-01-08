@@ -20,6 +20,7 @@
     --secondary: #4679B4;
     --secondary-hover: #396291;
     --tertiary: #454B59;
+    --tertiary-hover: #353A45;
     --accent1: #CFD6E8;
     --accent1-hover: #C4CADB;
     --transition: 0.2s ease-in-out;
@@ -355,13 +356,84 @@ footer.page-footer>* {
     fill: var(--tertiary);
 }
 
+/* FemArt Team Elements */
+
+.fa-board-gallery.wp-block-gallery.has-nested-images {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+    justify-items: left;
+}
+
+.fa-board-gallery img {
+    border-radius: var(--border-radius-md);
+    aspect-ratio: 1;
+}
+
+.fa-board-fallery figure.wp-block-image {
+    overflow: hidden;
+    width: 100%;
+    align-self: start;
+}
+
+.fa-board-gallery figcaption.wp-element-caption,
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+    position: relative;
+    display: block;
+    background: none;
+    background-image: none;
+    text-align: left;
+    font-size: 2rem;
+}
+
+/* Events Table */
+
+.fa-events-table table {
+    background-color: var(--tertiary);
+    border-color: transparent;
+}
+
+th {
+    background-color: var(--accent1-hover);
+    color: #000000;
+}
+
+table thead,
+.wp-block-table thead {
+    border-bottom: 0;
+}
+
+.fa-events-table td,
+.fa-events-table th,
+td,
+th {
+    border: 0;
+}
+
+tr:nth-of-type(even) {
+    background-color: var(--tertiary-hover);
+}
+
 /* Misc Layout Elements */
 
-.block-emphasis {
+.block-emphasis,
+.fa-emphasis {
     background-color: var(--accent1);
     border-radius: var(--border-radius-lg);
     padding: 5rem 7rem;
     color: #000000;
+    margin: 0;
+    overflow: hidden;
+}
+
+.fa-emphasis h2,
+.fa-emphasis.wp-block-group.is-vertical h2 {
+    margin-top: 0;
+    padding: 0;
+}
+
+.fa-emphasis .wp-block-buttons {
+    align-self: flex-start;
 }
 
 .fa-gallery-row {
@@ -389,6 +461,7 @@ footer.page-footer>* {
     width: 100%;
     max-width: 100%;
     position: relative;
+    padding: 0;
 }
 
 body .fa-header-bottom-divider+* {
@@ -408,11 +481,25 @@ body .fa-header-bottom-divider+* {
 
 /* WordPress Classes */
 
+.wp-block-columns {
+    margin: 0;
+}
+
+.wp-block-group.is-vertical {
+    gap: 4rem;
+    align-items: center !important;
+}
+
+.wp-block-group.is-vertical h2 {
+    margin-top: 2rem;
+}
+
 .wp-block-button {
     width: 100%;
 }
 
-.wp-block-button__link.wp-element-button {
+.wp-block-button__link.wp-element-button,
+.fa-emphasis-btn {
     position: relative;
     display: block;
     border-radius: var(--border-radius-sm);
@@ -466,10 +553,13 @@ body .fa-header-bottom-divider+* {
     font-size: 4rem !important;
 }
 
-.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
+/* Emphasis With Image */
+
+.emphasis-with-image,
+.wp-block-group.emphasis-with-image {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     border-radius: var(--border-radius-md);
     background-color: var(--accent1);
     color: #000000;
@@ -478,13 +568,56 @@ body .fa-header-bottom-divider+* {
     padding: 2rem;
 }
 
-.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow .wp-block-heading {
+.emphasis-with-image img {
+    border-radius: var(--border-radius-md);
+    width: 100%;
+}
+
+.emphasis-with-image .wp-block-buttons {
+    width: 100%;
+}
+
+.emphasis-with-image,
+.emphasis-with-image.wp-block-group.is-vertical h2 {
+    text-align: left;
+    width: 100%;
     padding: 0;
     margin: 0;
 }
 
-.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow img {
-    border-radius: var(--border-radius-md);
+.wp-block-heading {
+    padding: 0;
+    margin: 0;
+}
+
+.fa-flex-group,
+.fa-flex-group.is-layout-flex {
+    display: flex;
+    gap: 6rem;
+    align-items: stretch;
+}
+
+.fa-flex-group>* {
+    flex: 1;
+    gap: 0;
+}
+
+/* Inner Caption */
+
+.inner-caption {
+    position: relative;
+}
+
+.inner-caption figcaption {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    padding: 4px 12px;
+    font-size: 1.5rem;
+    margin: 0;
+    background-color: var(--accent1);
+    border-radius: var(--border-radius-sm);
 }
 
 /* WordPress Contact Form */
