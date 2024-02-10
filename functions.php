@@ -215,3 +215,13 @@ function cc_mime_types($mimes)
     return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+// Add support for custom page templates
+function custom_theme_support()
+{
+    add_theme_support('custom-page-templates', array(
+        'page-templates/template-artist.php' => 'Artists Page',
+        // Add additional template files here if needed
+    ));
+}
+add_action('after_setup_theme', 'custom_theme_support');
