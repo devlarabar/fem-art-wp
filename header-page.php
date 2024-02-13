@@ -32,7 +32,7 @@
 <body <?php body_class(); // WP provides some default body classes 
         ?>>
 
-    <div class="container">
+    <div class="container navbar-container">
         <nav class="navbar-femart flex justify-between items-center">
             <a href="/" class="header-logo">
                 <img src="<?php

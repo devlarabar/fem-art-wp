@@ -66,8 +66,15 @@ h2 {
 
 .container {
     width: 100%;
+    margin: auto;
+}
+
+.entry-content>*,
+.entry-content .wp-block-columns {
+    width: 100%;
     max-width: 1400px;
     margin: auto;
+    padding: 0 3rem;
 }
 
 .page-content-container {
@@ -83,7 +90,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 10rem;
-    padding: 0 3rem;
+    padding: 0;
 }
 
 /* Hero */
@@ -96,6 +103,12 @@ h2 {
     justify-content: flex-end;
     background-position: center;
     background-size: cover;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .hero-content>p {
@@ -140,6 +153,20 @@ h2 {
 }
 
 /* Navbar - Header */
+
+/* .navbar-container {
+    background-color: var(--background);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 5px solid var(--tertiary);
+} */
+
+.navbar-container {
+    width: 100%;
+    max-width: 1400px;
+}
 
 .navbar-femart {
     padding: 1rem 3rem;
@@ -271,6 +298,22 @@ ul.sub-menu li:hover {
 
 ul.sub-menu a:hover::after {
     display: none;
+}
+
+/* Background Section (Maybe make this a plugin?) */
+
+.section-with-bg {
+    position: relative;
+    background-color: var(--tertiary-hover);
+    padding: 5rem 3rem;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.section-with-bg>* {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
 }
 
 /* Footer */
@@ -536,6 +579,26 @@ body .fa-header-bottom-divider+* {
     z-index: 100;
 }
 
+/* Donor Hub */
+.donor-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.donor-gallery figure {
+    max-width: 200px;
+    display: inline-block;
+}
+
+.donor-gallery img {
+    max-height: 100px;
+    width: auto;
+}
+
+
 /* WordPress Classes */
 
 .wp-block-columns {
@@ -547,7 +610,7 @@ body .fa-header-bottom-divider+* {
     align-items: center !important;
 }
 
-.wp-block-group.is-vertical h2 {
+.wp-block-group.is-vertical:not(.section-with-bg) h2 {
     margin-top: 2rem;
 }
 
