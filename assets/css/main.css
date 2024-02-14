@@ -23,6 +23,7 @@
     --tertiary-hover: #353A45;
     --accent1: #CFD6E8;
     --accent1-hover: #C4CADB;
+    --accent2: #76BDB5;
     --transition: 0.2s ease-in-out;
     --text-color-main: #1E1E1E;
     --focus-outline: rgba(145, 171, 207, 0.6);
@@ -61,6 +62,14 @@ h2 {
 
 
 /* Layout Elements */
+
+/* Typography */
+
+a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 /* Main Container */
 
@@ -190,6 +199,7 @@ nav li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 2rem;
+    font-weight: normal;
 }
 
 nav li:not(.menu-item-has-children, .sub-menu li) a:not(.btn)::after {
@@ -598,6 +608,24 @@ body .fa-header-bottom-divider+* {
     width: auto;
 }
 
+.donor-list-container,
+.wp-block-group.is-vertical.donor-list-container {
+    gap: 1rem;
+}
+
+.donor-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.donor-list li {
+    display: block;
+    padding: 0.5rem 1.25rem;
+    background-color: var(--tertiary);
+    border-radius: var(--border-radius-md);
+}
 
 /* WordPress Classes */
 
