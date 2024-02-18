@@ -33,7 +33,7 @@
         ?>>
 
     <div class="container navbar-container">
-        <nav class="navbar-femart flex justify-between items-center">
+        <nav class="navbar-femart">
             <a href="/" class="header-logo">
                 <img src="<?php
                             $custom_logo_id = get_theme_mod('custom_logo');
@@ -41,13 +41,22 @@
                             echo $image[0];
                             ?>">
             </a>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'container' => false,
-                'menu_class' => 'nav navbar-nav'
-            ));
-            ?>
+            <div class="nav-container">
+                <button class="burger-menu" id="fa-mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+
+                </button>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'primary',
+                    'container' => false,
+                    'menu_class' => 'nav navbar-nav',
+                    'menu_id' => 'fa-navigation'
+                ));
+                ?>
+            </div>
         </nav>
     </div>
     <div class="hero hero-page">

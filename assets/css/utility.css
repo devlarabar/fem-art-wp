@@ -39,3 +39,9 @@
 .p-lg {
     padding: 3rem;
 }
+
+/* Gap */
+
+.big-gap {
+    gap: 30px;
+}
