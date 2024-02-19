@@ -33,7 +33,7 @@
         else :
             ?>
 
-            <p><?php esc_html_e('It seems we cannot find what you are looking for.'); ?>
+            <p><?php esc_html_e('It seems we cannot find what you are looking for. Use the form below to search the site, or the navigation above.'); ?>
             <?php get_search_form();
 
         endif;
