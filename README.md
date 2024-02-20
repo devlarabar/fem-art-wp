@@ -4,4 +4,11 @@ FemArt Gallery is a nonprofit 501(c)3 organization based in Jacksonville, FL. Th
 
 Estimated completion: March 2024.
 
+## Features
+- WordPress CMS
+- Custom Gutenberg blocks (via custom plugins)
+- Simplified and consolidated navigation
+- Easy-to-view events page
+- Clear CTAs
+
 ![fa-wireframe](https://github.com/devlarabar/fem-art-wp/assets/122644200/dacdc1de-734f-4fe5-ba0f-ac1d90553f44)
