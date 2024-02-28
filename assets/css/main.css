@@ -71,9 +71,13 @@ h2 {
 /* Typography */
 
 a {
-    color: #ffffff;
+    color: var(--accent2);
     font-weight: bold;
     text-decoration: underline;
+}
+
+a:hover {
+    color: var(--primary);
 }
 
 /* Main Container */
@@ -198,6 +202,10 @@ a {
     justify-content: space-between;
     gap: 3rem;
     list-style-type: none;
+}
+
+nav ul {
+    padding: 0;
 }
 
 nav li a {
