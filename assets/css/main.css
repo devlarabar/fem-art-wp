@@ -538,7 +538,8 @@ tr:nth-of-type(even) {
 
 /* Headings with a divider after them */
 
-.fa-header-bottom-divider {
+.fa-header-bottom-divider,
+.fa-header-bottom-divider-center {
     width: 100%;
     max-width: 100%;
     position: relative;
@@ -549,7 +550,12 @@ body .fa-header-bottom-divider+* {
     margin-top: 2rem;
 }
 
-.fa-header-bottom-divider::after {
+body .fa-header-bottom-divider-center+* {
+    margin-top: 3rem;
+}
+
+.fa-header-bottom-divider::after,
+.fa-header-bottom-divider-center::after {
     content: "";
     height: 6px;
     width: 150px;
@@ -558,6 +564,12 @@ body .fa-header-bottom-divider+* {
     position: absolute;
     left: 0;
     bottom: -1.5rem;
+}
+
+.fa-header-bottom-divider-center::after {
+    width: 20%;
+    left: 40%;
+    bottom: -0.8rem;
 }
 
 /* Donor Hub */
@@ -727,6 +739,14 @@ body .fa-header-bottom-divider+* {
 
 .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
     width: 100% !important;
+}
+
+.wp-block-separator {
+    border: 0;
+    border-radius: var(--border-radius-md);
+    background-color: var(--accent2);
+    width: 80%;
+    height: 5px;
 }
 
 /* Contact Form from Plugin */
@@ -948,10 +968,31 @@ a:not(:has(button)):focus {
     .site-main .entry-content {
         gap: 5rem;
     }
+
+    .wp-block-social-link-anchor {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 @media all and (max-width: 400px) {
     .hero-content>p {
         font-size: 1.6rem;
+    }
+}
+
+@media all and (max-width: 385px) {
+    footer.page-footer {
+        padding: 40px;
+    }
+
+    .wp-block-social-link-anchor {
+        width: 40px;
+        height: 40px;
+    }
+
+    iframe {
+        max-width: 100% !important;
+        overflow: hidden;
     }
 }
