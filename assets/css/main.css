@@ -217,6 +217,10 @@ nav li a {
     font-weight: normal;
 }
 
+nav li a:hover {
+    color: #ffffff;
+}
+
 nav li:not(.menu-item-has-children, .sub-menu li) a:not(.btn)::after {
     content: "";
     width: 100%;
