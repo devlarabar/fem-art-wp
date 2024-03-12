@@ -10,7 +10,7 @@ if (is_page('home')) {
 ?>
 
 <div id="primary" class="content-area">
-    <main id="main" class="site-main">
+    <main id="main" class="site-main blog-posts">
 
         <?php
         // This is a PHP shorthand

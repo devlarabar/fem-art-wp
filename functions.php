@@ -225,3 +225,11 @@ function custom_theme_support()
     ));
 }
 add_action('after_setup_theme', 'custom_theme_support');
+
+// Change excerpt length
+
+function custom_excerpt_length($length)
+{
+    return 20;
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
