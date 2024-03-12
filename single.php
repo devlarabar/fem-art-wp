@@ -18,6 +18,7 @@ if (is_page('home')) {
 
         // If comments enabled, show the comments template
         if (comments_open() || get_comments_number()) :
+            echo '<hr />';
             comments_template();
         endif;
         ?>

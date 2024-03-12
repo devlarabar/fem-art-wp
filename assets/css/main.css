@@ -70,6 +70,15 @@ h2 {
 
 /* Layout Elements */
 
+hr {
+    width: 90%;
+    height: 4px;
+    border-radius: var(--border-radius-lg);
+    background-color: var(--secondary-hover);
+    border: 0;
+    margin: 3rem auto;
+}
+
 /* Typography */
 
 a {
@@ -742,6 +751,14 @@ body .fa-header-bottom-divider-center+* {
     border-radius: var(--border-radius-sm);
     background-size: cover;
     background-position: center;
+}
+
+.site-main .entry-content.blog-single {
+    gap: 2rem;
+}
+
+.blog-single h2 {
+    margin: 0 0 1rem 0;
 }
 
 /* WordPress Classes */
