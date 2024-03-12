@@ -4,7 +4,8 @@
 
 <section class="no-results not-found">
     <header class="page-header">
-        <h1 class="page-title"><?php esc_html_e('Nothing Found', 'femart'); ?></h1>
+        <h1 class="page-title"><?php esc_html_e("There's nothing here!", 'femart'); ?></h1>
+        <p>This page is currently empty. Perhaps you should check back soon?</p>
     </header>
 
     <div class="page-content">
@@ -13,7 +14,7 @@
             printf(
                 '<p>' . wp_kses(
                     /* Link to WP admin new post page */
-                    __('Ready to publish your first post? <a href=""%1$s">Get started here</a>.', 'femart'),
+                    __('Ready to publish your first post? <a href="/wp-admin/edit.php">Get started here</a>.', 'femart'),
                     array(
                         'a' => array(
                             'href' => array(),

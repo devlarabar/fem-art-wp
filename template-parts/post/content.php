@@ -5,7 +5,11 @@
 <article id="post-<?php the_ID(); ?>" class="blog-post">
     <header class="blog-post-preview-header">
         <!-- Post Thumbnail -->
-        <div class="blog-post-preview-thumbnail" <?php
+        <div class="blog-post-preview-thumbnail <?php
+                                                if (!has_post_thumbnail()) :
+                                                    echo 'hidden';
+                                                endif;
+                                                ?>" <?php
                                                     if (has_post_thumbnail()) :
                                                         echo 'style="background-image: url(' . get_the_post_thumbnail_url() . ');"'; // full, large, medium, custom size
                                                     endif;

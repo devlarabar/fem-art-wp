@@ -34,6 +34,10 @@
     height: 100%;
 }
 
+.h-0 {
+    height: 0;
+}
+
 /* Spacing */
 
 .p-lg {
@@ -44,4 +48,10 @@
 
 .big-gap {
     gap: 30px;
+}
+
+/* Display */
+
+.hidden {
+    display: none;
 }

@@ -16,8 +16,8 @@
 <style>
     .hero-page {
         background-image: url(<?php
-                                if (has_post_thumbnail($post->ID)) {
-                                    $image = get_the_post_thumbnail_url($post);
+                                if (has_post_thumbnail()) {
+                                    $image = get_the_post_thumbnail_url(get_queried_object());
                                 } else {
                                     $image = esc_url(header_image());
                                 }

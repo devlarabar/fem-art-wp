@@ -10,7 +10,11 @@ if (is_page('home')) {
 ?>
 
 <div id="primary" class="content-area">
-    <main id="main" class="site-main blog-posts">
+    <main id="main" class="site-main <?php if (have_posts()) {
+                                            echo 'blog-posts';
+                                        } else {
+                                            echo 'entry-content';
+                                        }; ?>">
 
         <?php
         // This is a PHP shorthand

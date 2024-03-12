@@ -680,7 +680,18 @@ body .fa-header-bottom-divider-center+* {
     background-color: var(--accent1);
     color: #000000;
     border-radius: var(--border-radius-md);
-    padding: var(--px);
+    padding: 15px;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media all and (min-width: 400px) {
+    .blog-post {
+        padding: var(--px);
+        font-size: 2rem;
+    }
 }
 
 .blog-post h2 {
@@ -691,8 +702,9 @@ body .fa-header-bottom-divider-center+* {
 .blog-post-preview {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
-    font-size: 2rem;
+    flex: 1;
 }
 
 .blog-post-preview p {
@@ -701,7 +713,13 @@ body .fa-header-bottom-divider-center+* {
 
 .blog-post-preview-link {
     align-self: flex-end;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+}
+
+@media all and (min-width: 400px) {
+    .blog-post-preview-link {
+        font-size: 1.8rem;
+    }
 }
 
 .blog-post a {
@@ -720,7 +738,7 @@ body .fa-header-bottom-divider-center+* {
 
 .blog-post-preview-thumbnail {
     width: 100%;
-    height: 150px;
+    height: 200px;
     border-radius: var(--border-radius-sm);
     background-size: cover;
     background-position: center;
