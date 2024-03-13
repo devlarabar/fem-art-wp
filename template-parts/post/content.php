@@ -21,6 +21,16 @@
                                                         ?>>
             </div>
         <?php endif; ?>
+        <?php if (is_singular()) : ?>
+            <div class="back-btn-container">
+                <a onClick="goBack()" class="back-btn">← Go Back</a>
+            </div>
+        <?php endif; ?>
+        <script>
+            function goBack() {
+                window.history.back()
+            }
+        </script>
         <?php if (is_singular()) {
             the_title('<h2 class="fa-header-bottom-divider">', '</h2>');
         } else {

@@ -22,7 +22,6 @@ if (is_page('home')) {
         endwhile;
         ?>
     </main>
-    <?php get_sidebar(); ?>
 </div>
 
 <?php

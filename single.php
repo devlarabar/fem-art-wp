@@ -8,7 +8,7 @@ if (is_page('home')) {
 }
 ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area blog-single-container">
     <main id="main" class="site-main">
         <?php
         while (have_posts()) :
@@ -17,14 +17,17 @@ if (is_page('home')) {
         endwhile;
 
         // If comments enabled, show the comments template
-        if (comments_open() || get_comments_number()) :
-            echo '<hr />';
-            comments_template();
-        endif;
+        // if (comments_open() || get_comments_number()) :
+        //     echo '<hr />';
+        //     comments_template();
+        // endif;
         ?>
     </main>
 
-    <?php get_sidebar(); ?>
+    <?php if (is_home() || is_single() && !is_page()) {
+        get_sidebar();
+    }
+    ?>
 </div>
 
 <?php get_footer(); ?>
