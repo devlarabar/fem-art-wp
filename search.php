@@ -9,24 +9,32 @@ if (is_page('home')) {
 ?>
 
 <div id="primary" class="search-content-area">
-    <main id="main" class="site-main">
+    <main id="main" class="site-main <?php if (have_posts()) echo 'blog-single-container'; ?>">
+
         <?php if (have_posts()) : ?>
-            <?php
-            // Start the loop
-            while (have_posts()) :
-                the_post();
-                get_template_part('template-parts/page/content', 'search');
-            endwhile;
+            <section class="search-results">
+                <h2 class="fa-header-bottom-divider">Search results for: "<?php echo get_search_query(); ?>"</h2>
+                <?php
+                // Start the loop
+                while (have_posts()) :
+                    the_post();
+                    get_template_part('template-parts/page/content', 'search');
+                endwhile;
 
-            echo paginate_links([
-                'prev_text' => esc_html__('Prev', 'femart'),
-                'next_text' => esc_html__('Next', 'femart'),
-            ]);
+                echo '<div class="pagination">';
+                echo paginate_links([
+                    'prev_text' => esc_html__('Prev', 'femart'),
+                    'next_text' => esc_html__('Next', 'femart'),
+                ]);
+                echo '</div>';
+                ?>
+            </section>
+            <?php get_sidebar(); ?>
 
-        else :
-            get_template_part('template-parts/page/content', 'none')
+        <?php else : get_template_part('template-parts/page/content', 'none')
 
-            ?>
+        ?>
+
 
         <?php endif; ?>
     </main>

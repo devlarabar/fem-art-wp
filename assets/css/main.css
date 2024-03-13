@@ -937,6 +937,74 @@ body .fa-header-bottom-divider-center+* {
     color: #fff;
 }
 
+/* Search Page */
+
+.search-results {
+    padding: 0 var(--px);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.search-results h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.search-results h2.search-title {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.search-results p {
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+.search-result {
+    padding: var(--px);
+    border-radius: var(--border-radius-md);
+}
+
+.search-result:nth-last-of-type(odd) {
+    background-color: var(--tertiary-hover);
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.pagination .page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    color: #ffffff;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.pagination a.page-numbers {
+    background-color: var(--tertiary);
+}
+
+.pagination a.page-numbers:hover {
+    background-color: var(--tertiary-hover);
+}
+
+.pagination .prev.page-numbers,
+.pagination .next.page-numbers {
+    width: 6rem;
+}
+
 /* WordPress Classes */
 
 .wp-block-columns {
