@@ -12,7 +12,7 @@ if (is_page('home')) {
     <main id="main" class="site-main <?php if (have_posts()) echo 'blog-single-container'; ?>">
 
         <?php if (have_posts()) : ?>
-            <section class="search-results">
+            <section class="search-results-container">
                 <h2 class="fa-header-bottom-divider">Search results for: "<?php echo get_search_query(); ?>"</h2>
                 <?php
                 // Start the loop

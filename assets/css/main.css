@@ -939,24 +939,24 @@ body .fa-header-bottom-divider-center+* {
 
 /* Search Page */
 
-.search-results {
+.search-results-container {
     padding: 0 var(--px);
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
 }
 
-.search-results h2 {
+.search-results-container h2 {
     margin: 0;
     padding: 0;
 }
 
-.search-results h2.search-title {
+.search-results-container h2.search-title {
     font-size: 2.8rem;
     margin: 0;
 }
 
-.search-results p {
+.search-results-container p {
     margin: 0.5rem 0;
     padding: 0;
 }
