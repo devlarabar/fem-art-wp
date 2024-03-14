@@ -58,4 +58,6 @@
 	</div>
 	<div class="container">
 
-		<div class="page-content-container">
+		<div class="<?php if (have_posts()) {
+						echo 'page-content-container';
+					} ?>">
