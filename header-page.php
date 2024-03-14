@@ -78,6 +78,6 @@
     </div>
     <div class="container">
 
-        <div class="<?php if (have_posts()) {
+        <div class="<?php if (have_posts() && !is_404()) {
                         echo 'page-content-container';
                     } ?>">
