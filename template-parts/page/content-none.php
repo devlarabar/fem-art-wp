@@ -3,7 +3,7 @@
 ?>
 
 <section class="no-results not-found">
-    <header class="page-header">
+    <header class="page-header content-none-container">
         <h1 class="page-title"><?php esc_html_e("There's nothing here!", 'femart'); ?></h1>
         <p>This page is currently empty. Perhaps you should check back soon?</p>
     </header>
@@ -23,21 +23,18 @@
                 ) . '</p>',
                 esc_url(admin_url('post-new.php'))
             );
-
-        elseif (is_search()) :
         ?>
 
-            <p>
-                <?php esc_html_e('Sorry, but nothing matched your search.'); ?>
-            <?php get_search_form();
+    </div>
 
-        else :
-            ?>
 
-            <p><?php esc_html_e('It seems we cannot find what you are looking for. Use the form below to search the site, or the navigation above.'); ?>
-            <?php get_search_form();
+</section>
+
+<?php else : ?>
+    <div class="search-form-404-page">
+        <p class="m-0"><?php esc_html_e('Use the form below to search the site, or the navigation above.'); ?></p>
+    <?php get_search_form();
 
         endif;
-            ?>
+    ?>
     </div>
-</section>

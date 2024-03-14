@@ -970,6 +970,34 @@ body .fa-header-bottom-divider-center+* {
     background-color: var(--tertiary-hover);
 }
 
+/* Search Page: No Results */
+
+.search-form-404-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--tertiary-hover);
+    padding: 50px var(--px);
+}
+
+.search-form-404-page .search-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.search-form-404-page .search-form input[type="submit"] {
+    padding: 8px;
+    max-width: 250px;
+}
+
+.content-none-container {
+    padding: var(--px);
+}
+
 /* Pagination */
 
 .pagination {

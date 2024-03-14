@@ -16,7 +16,9 @@
 <style>
     .hero-page {
         background-image: url(<?php
-                                if (has_post_thumbnail()) {
+                                if (is_category()) {
+                                    $image = esc_url(header_image());
+                                } else if (has_post_thumbnail()) {
                                     $image = get_the_post_thumbnail_url(get_queried_object());
                                 } else {
                                     $image = esc_url(header_image());
@@ -61,9 +63,21 @@
     </div>
     <div class="hero hero-page">
         <div class="color-overlay-50 flex justify-center items-center">
-            <h1><?php single_post_title(); ?></h1>
+            <h1><?php if (is_page()) {
+                    echo single_post_title();
+                } else if (is_home()) {
+                    echo single_post_title();
+                } else if (is_category()) {
+                    $category = get_queried_object();
+                    $category_name = $category->name;
+                    echo 'Category: ' . $category_name;
+                } else {
+                    echo get_bloginfo('name');
+                } ?></h1>
         </div>
     </div>
     <div class="container">
 
-        <div class="page-content-container">
+        <div class="<?php if (have_posts()) {
+                        echo 'page-content-container';
+                    } ?>">
