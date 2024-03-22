@@ -173,6 +173,7 @@ hr {
     align-items: center;
     padding: 1rem 2rem;
     border-bottom: 1px dotted var(--primary);
+    color: #000000;
 }
 
 .sidebar .wp-block-categories-list li:last-of-type {
